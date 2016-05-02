@@ -1,0 +1,39 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.containers</groupId>
+    <artifactId>mr-spark-containers</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>mr-spark-containers</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <scala.version>2.10.5</scala.version>
+        <scala.tools.version>2.10</scala.tools.version>
+        <spark.version>1.5.2</spark.version>
+        <scalding.version>0.9.1</scalding.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>${scala.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_${scala.tools.version}</artifactId>
+            <version>${spark.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.twitter</groupId>
+            <artifactId>scalding-core_2.10</artifactId>
+            <version>${scalding.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>
